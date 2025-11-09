@@ -54,14 +54,13 @@ def _ensure_results() -> Dict[str, pd.DataFrame]:
         df_ext = pd.DataFrame()
         df_sub = pd.DataFrame()
         df_pl = pd.DataFrame()
-        df_joined = df_agro.copy()
     out = {
         "agro": df_agro,
         "logistics": df_log,
         "extraction": df_ext,
         "substrate": df_sub,
         "plates": df_pl,
-        "joined": df_joined,
+        "joined": df_agro.copy(),
     }
     st.session_state[key] = out
     return out
