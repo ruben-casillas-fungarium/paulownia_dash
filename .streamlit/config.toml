@@ -1,11 +1,20 @@
+# .streamlit/config.toml
 [theme]
-base="light"
-primaryColor="#2A5DB0"
-backgroundColor="#F7F9FC"
-secondaryBackgroundColor="#E8EEF6"
-textColor="#1F2933"
-font="sans serif"
+base = "light"
+primaryColor = "#263133"                 # Deep slate for interactive focus
+backgroundColor = "#F8F5EB"              # Ivory background
+secondaryBackgroundColor = "#F0EBDE"     # Warm secondary panels
+textColor = "#263133"
+font = "sans serif"
+borderColor = "#D5DB43"
+
+# Optional sidebar overrides (uncomment if you want distinct sidebar tone)
+# [theme.sidebar]
+# backgroundColor = "#F0EBDE"
+# textColor = "#263133"
+# primaryColor = "#405C52"
 
 [server]
 headless = true
 maxUploadSize = 50
+# enableStaticServing = true   # Uncomment if you want to serve from ./static/

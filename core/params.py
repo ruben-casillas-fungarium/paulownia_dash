@@ -59,11 +59,11 @@ class LogisticsParams(BaseModel):
     Distances are measured in kilometres, payloads in tonnes and costs in EUR.
     """
 
-    trailer_payload_t: float = Field(20.0,ge= 1, le= 1000, description="Payload capacity of one trailer (t)")
-    transport_distance_km: float = Field(800.0,ge= 1, le= 10000, description="Distance from supplier to plant (km)")
-    transport_cost_per_km: float = Field(1.40,ge= 0.1, le= 1000, description="Transport cost per km of travel (EUR/km)")
+    trailer_payload_t: float = Field(20 , ge= 0, le= 100,  description="Payload capacity of one trailer (t)")
+    transport_distance_km: float = Field(80,ge= 1, le= 10000, description="Distance from supplier to plant (km)")
+    transport_cost_per_km: float = Field(1,ge= 0.1, le= 1000, description="Transport cost per km of travel (EUR/km)")
     backhaul_utilization: float = Field(0.0, ge=0.0, le=1.0, description="Fraction of distance cost recovered via backhaul")
-    truck_emission_kg_per_tkm: float = Field(0.08,ge= 0, le= 100, description="Truck GHG emissions per ton‑kilometre (kg CO₂e/t·km)")
+    truck_emission_kg_per_tkm: float = Field(1,ge= 0, le= 100, description="Truck GHG emissions per ton‑kilometre (kg CO₂e/t·km)")
     loading_loss_frac: float = Field(0.02, ge=0.0, le=1.0, description="Fraction of material lost during loading/unloading")
 
 class ExtractionParams(BaseModel):
@@ -101,7 +101,7 @@ class ExtractionParams(BaseModel):
         le=120,
         description="Pressing time per batch (minutes)."
     )
-    press_energy_kWh_per_t_root: float = Field(
+    press_energy_kWh_per_t_root: float = Field( 
         2.0,
         ge=0.0,
         le=1000.0,
@@ -179,11 +179,12 @@ class SubstrateParams(BaseModel):
     other_dry_share: float = Field(0.90, ge=0.0, le=1.0, description="Fraction of dry mass from crown+wood grind")
     rehydration_ratio_wet_over_dry: float = Field(3.7 / 1.1, description="Wet/dry mass ratio used in substrate")
     sterilize_kWh_per_t_substrate: float = Field(4.0, description="Energy used to sterilise 1 tonne of wet substrate (kWh)")
-    inoculum_cost_eur_per_kg: float = Field(2.50, description="Inoculum cost per kg")
-    additives_cost_eur_per_kg_wet: float = Field(0.30, description="Additives cost per kg wet substrate")
+    inoculum_cost_eur_per_kg: float = Field(0.85, description="Inoculum cost per kg")
+    additives_cost_eur_per_kg_wet: float = Field(0.85, description="Additives cost per kg wet substrate")
     yield_loss_frac: float = Field(0.05, ge=0.0, le=1.0, description="Fraction of substrate lost to contamination")
 
 class PlateParams(BaseModel):
+    plates_per_ton_hint: int = Field(100, ge=1, le=1000, description="Number of plates per ton of mixture")
     plate_len_m: float = Field(1.0, ge=0.001, le=1_000, description="length of the plate in Meters (m)")
     plate_wid_m: float = Field(1.0, ge=0.001, le=1_000, description="width of the plate in Meters (m)")
     plate_thk_m: float = Field(0.06, ge=0.001, le=1_000, description="thickness of the plate in Meters (m)")
@@ -193,12 +194,11 @@ class PlateParams(BaseModel):
     energy_kWh_per_100_plates: float = Field(4.0, ge=0.001, le=10_000, description="kWh used per 100 plates in kiloWatts per hour (kWh)")
     solar_share: float = Field(1.0, ge=0.001, le=1, description="Percentage of the production from Sustainable sources (%)")
     grid_emission_kg_per_kWh: float = Field(0.35, ge=0.001, le=1000, description="CO2 emission in kilograms (kg) per kilowatthour (kWh)")
-    plate_cost_eur: float = Field(3.0, ge=0.001, le=1000, description="Production cost per plate (eur)")
-    plate_price_eur: float = Field(12.0, ge=0.001, le=1000, description="Retail price per plate (eur)")
-    competitor_eps_price_eur: float = Field(12.0, ge=0.001, le=1000, description="Retail price of EPS plate of same volume (eur)")
-    competitor_eps_cost_eur: float = Field(6.0, ge=0.001, le=1000, description="Production cost of EPS plate of same volume (eur)")
-    plates_per_ton_hint: float = Field(1000.0, ge=0.001, le=1000, description="Number of plates per ton of mixture")
-
+    plate_cost_eur: float = Field(3.0, ge=0.1, le=100, description="Production cost per plate (eur)")
+    plate_price_eur: float = Field(12.0, ge=0.01, le=100, description="Retail price per plate (eur)")
+    competitor_eps_price_eur: float = Field(12.0, ge=0.01, le=100, description="Retail price of EPS plate of same volume (eur)")
+    competitor_eps_cost_eur: float = Field(6.0, ge=0.01, le=100, description="Production cost of EPS plate of same volume (eur)")
+    
 
 class EoLParams(BaseModel):
     """Parameters controlling end‑of‑life soil carbon projects.
@@ -247,7 +247,7 @@ class EoLParams(BaseModel):
         description="Low estimate for carbon price (EUR per credit unit)."
     )
     carbon_price_hi_eur: float = Field(
-        70.0,
+        101.0,
         ge=0.0,
         le=1000.0,
         description="High estimate for carbon price (EUR per credit unit)."
@@ -299,7 +299,6 @@ class EoLParams(BaseModel):
         description="Annual monitoring cost per hectare (EUR/ha/year)."
     )
 
-
 class LaborParams(BaseModel):
     min_automation_employees: int = Field(
         3,
@@ -322,7 +321,7 @@ class LaborParams(BaseModel):
     shifts_per_day: int = Field(
         3,
         ge=1,
-        le=4,
+        le=3,
         description="Number of work shifts per day (typically 1–4)."
     )
 
@@ -331,6 +330,8 @@ class ProfitAllocation(BaseModel):
     to_employees: float = Field(0.10, ge=0, le=100, description="Social Equity for Employees in the new economy")    #Social
     to_company: float = Field(0.30, ge=0, le=100, description="Equity for Consortium (PauwMyco)")      #International
     to_investors: float = Field(0.50 , ge=0, le=100, description="Equity for international investment ")   #Profitable
+    
+    
     @field_validator("to_farmers","to_employees","to_company","to_investors", mode="after")
     @classmethod
     def _non_negative(cls, v: float) -> float:
