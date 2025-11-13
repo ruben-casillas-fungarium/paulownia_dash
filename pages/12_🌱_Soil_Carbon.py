@@ -17,14 +17,12 @@ import plotly.graph_objects as go
 import streamlit as st
 
 # --- Robust imports whether this file lives inside `pages/` or not
-
 from core.params import Scenario
 from core.sim_1_agriculture import run_sim
 from core.sim_2_production import run_industrial_chain
 from core.sim_3_eol import run_eol_module
 from core.aggregate import compute_business_streams
 from core.economics import npv, irr
-
 
 
 def _get_scenario() -> Scenario:
@@ -70,6 +68,7 @@ def _fmt_eur(x: float) -> str:
 def _safe(df: pd.DataFrame, col: str, default: float=0.0) -> pd.Series:
     return df[col] if col in df.columns else pd.Series([default]*len(df))
 
+
 def _soil_curves_local(years: np.ndarray, eol: Any) -> Tuple[pd.Series, pd.Series]:
     # Piecewise accumulation per spec (tCO2/ha)
     after5_treated = float(getattr(eol, "treated_CO2_add_t_per_ha_after_5y", 4.0))
@@ -90,30 +89,110 @@ def _soil_curves_local(years: np.ndarray, eol: Any) -> Tuple[pd.Series, pd.Serie
 
 def page() -> None:
     st.header("🌱 Soil Carbon")
+
+    # --- Intro narrative & visuals -----------------------------------------
+    top_col1, top_col2 = st.columns([2,1])
+    with top_col1:
+        st.markdown(
+            """
+            At PauwMyco, we go beyond building panels — we aim to **restore soils**.
+
+            This page shows how recovered plates and circular reuse can help
+            increase **soil carbon sequestration per hectare (tCO₂/ha)**, compared
+            to a baseline scenario.
+
+            It tracks how, over time, treated land receives additional carbon
+            and how that compares with business-as-usual. This connects the
+            material cycle back to **land-use and climate impact**.
+            """
+        )
+        st.markdown(
+            """
+            In the context of the EU’s Soil Strategy and the Nature Restoration
+            Law, projects that deliver **materials value** *and* support soil
+            health and land restoration are becoming increasingly compelling
+            for investors, policymakers and land-owners alike.
+            """
+        )
+    with top_col2:
+        st.image(
+            "assets/images/FullLogoGroundedRoots.png",
+            caption="PauwMyco – closing the loop in soil and materials",
+            use_container_width=True,
+        )
+        # st.image(
+        #     "assets/images/pauwmyco_soil_carbon_hero.png",
+        #     caption="Treated vs baseline soil carbon per hectare over time.",
+        #     use_container_width=True,
+        # )
+
+    st.markdown("---")
+
     scn = _get_scenario()
     eol = getattr(scn, "eol", None)
     res = _ensure_results()
     df_pl = res["plates"]
+
     if df_pl.empty:
         st.info("No plates/coverage yet. Soil module requires EoL recovered material.")
         return
 
     years = df_pl["year"].to_numpy()
     treated, base = _soil_curves_local(years, eol)
-    df = pd.DataFrame({"year": years, "treated_tCO2_per_ha": treated, "baseline_tCO2_per_ha": base})
+    df = pd.DataFrame({
+        "year": years,
+        "treated_tCO2_per_ha": treated,
+        "baseline_tCO2_per_ha": base,
+    })
     df["delta_tCO2_per_ha"] = df["treated_tCO2_per_ha"] - df["baseline_tCO2_per_ha"]
 
-    # Charts
+    # --- Chart --------------------------------------------------------------
+    st.subheader("Soil carbon per hectare — treated vs baseline")
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=df["year"], y=df["treated_tCO2_per_ha"], name="Treated (tCO₂/ha)"))
-    fig.add_trace(go.Scatter(x=df["year"], y=df["baseline_tCO2_per_ha"], name="Baseline (tCO₂/ha)"))
-    fig.update_layout(title="Soil carbon per hectare — treated vs baseline", yaxis_title="tCO₂/ha")
+    fig.add_trace(go.Scatter(
+        x=df["year"],
+        y=df["treated_tCO2_per_ha"],
+        name="Treated (tCO₂/ha)"
+    ))
+    fig.add_trace(go.Scatter(
+        x=df["year"],
+        y=df["baseline_tCO2_per_ha"],
+        name="Baseline (tCO₂/ha)"
+    ))
+    fig.update_layout(
+        title="Soil carbon per hectare — treated vs baseline",
+        yaxis_title="tCO₂/ha"
+    )
     st.plotly_chart(fig, width="stretch")
 
-    st.subheader("Per‑hectare table")
-    st.dataframe(df, width="stretch")
-    st.download_button("Download soil carbon per‑ha CSV", df.to_csv(index=False).encode(), "soil_carbon_per_ha.csv", "text/csv")
+    st.caption(
+        "The upper line shows how much carbon is stored per hectare when our material is returned to land; the lower line is a baseline scenario. "
+        "The gap (delta) is the additional sequestration potential enabled by PauwMyco’s circular model."
+    )
 
+    st.markdown("---")
+
+    # --- Table & download ---------------------------------------------------
+    st.subheader("Per-hectare table")
+    st.caption(
+        "This table lists yearly values for treated and baseline tCO₂/ha, and the difference. "
+        "Download the CSV to feed into LCA models, climate disclosures or restoration reports."
+    )
+    st.dataframe(df, width="stretch")
+    st.download_button(
+        "Download soil carbon per-ha CSV",
+        df.to_csv(index=False).encode(),
+        "soil_carbon_per_ha.csv",
+        "text/csv"
+    )
+
+    st.markdown("---")
+
+    # st.image(
+    #     "assets/images/pauwmyco_soil_carbon_kpi.png",
+    #     caption="Key indicators and progression of soil carbon improvement.",
+    #     use_container_width=True,
+    # )
 
 if __name__ == "__main__":
     page()
