@@ -91,7 +91,7 @@ def main() -> None:
         st.markdown(
             """
             This dashboard models the integrated **Paulownia + mycelium circular economy**  
-            behind **PauwMyco** – from **agroforestry and biomass harvesting** to  
+            behind **Pretzl Paulownia and Fungarium Global** – from **agroforestry and biomass harvesting** to  
             **mycelium biocomposites**, **chemical co-products**, and **soil regeneration**.
 
             Use it to explore how different planting, harvesting and processing
@@ -115,18 +115,18 @@ def main() -> None:
     with col2:
         # Hero visualization (placeholder path – point to the generated image)
         st.image(
-            "assets/images/pauwmyco_dashboard_hero.png",
-            caption="PauwMyco: Paulownia biomass → mycelium materials → regional impact",
+            "assets/images/GenAI_forest_Theo_Panels.png",
+            caption="Paulownia biomass → mycelium materials → regional impact",
             use_container_width=True,
         )
 
         # Key indicative metrics – values taken from PauwMyco documentation
         st.metric(label="Global EPS market (2024, approx.)", value="~€18 B")
-        st.metric(label="Phase B annual revenue potential", value="€48–70 M")
-        st.metric(label="Long-term plant network (Phase C/D)", value="€250 M+ / year")
+        st.metric(label="Phase B annual revenue potential", value="€48–70 M / year")
+        st.metric(label="Long-term plant network (Phase C/D)", value="€550 M+ / year")
 
         st.caption(
-            "Figures illustrative based on PauwMyco's internal projections and "
+            "Figures illustrative based on internal projections and "
             "market benchmarks; see investor materials for full financial detail."
         )
 
@@ -148,7 +148,7 @@ def main() -> None:
         with col_a:
             st.markdown(
                 """
-                PauwMyco integrates **Paulownia agroforestry** with **mycelium
+                Our products integrate **Paulownia agroforestry** with **mycelium
                 biocomposites** and **bio-chemistry** into a single platform:
 
                 1. **Paulownia cultivation & biomass**
@@ -187,8 +187,8 @@ def main() -> None:
 
         with col_b:
             st.image(
-                "assets/images/pauwmyco_circular_economy_flow.png",
-                caption="Simplified Paulownia–mycelium circular economy flow.",
+                "assets/images/CE_Fungarium.png",
+                caption="Simplified Fungarium Global and Pretzl Paulownia circular economy flow.",
                 use_container_width=True,
             )
 

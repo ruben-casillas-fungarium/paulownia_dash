@@ -52,7 +52,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_scenario_inputs_hero.png",
+            "assets/images/CE_Fungarium.png",
             caption="From hectares and prices to plates, chemistry and CO2.",
             use_container_width=True,
         )
@@ -60,11 +60,11 @@ def page() -> None:
     st.markdown("---")
 
     # Schematic flow image to guide the form structure
-    st.image(
-        "assets/images/pauwmyco_scenario_inputs_flow.png",
-        caption="Each block corresponds to a section of the Scenario Inputs form.",
-        use_container_width=True,
-    )
+    # st.image(
+    #     "assets/images/pauwmyco_scenario_inputs_flow.png",
+    #     caption="Each block corresponds to a section of the Scenario Inputs form.",
+    #     use_container_width=True,
+    # )
 
     st.info(
         "Tip for investors: start from a known project size (e.g. a Phase A or B "

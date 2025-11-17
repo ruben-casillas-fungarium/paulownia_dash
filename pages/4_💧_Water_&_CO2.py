@@ -100,7 +100,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_water_co2_hero.png",
+            "assets/images/GenAI_Apulownia_fields_humid.png",
             caption="Balancing irrigation needs with long-term carbon fixation.",
             use_container_width=True,
         )
@@ -236,7 +236,7 @@ def page() -> None:
         )
     with col_ctx2:
         st.image(
-            "assets/images/pauwmyco_water_co2_context.png",
+            "assets/images/GenAI_Paulownia_Fields.png",
             caption="Linking scenario outputs to policy, water stress and regional resilience.",
             use_container_width=True,
         )

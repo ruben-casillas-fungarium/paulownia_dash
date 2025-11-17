@@ -49,7 +49,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_results_timeseries_hero.png",
+            "assets/images/GenAI_Theo_Panel_Leaf.png",
             caption="KPIs and time series powered by your scenario.",
             use_container_width=True,
         )

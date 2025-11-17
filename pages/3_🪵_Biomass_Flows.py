@@ -92,15 +92,38 @@ def page() -> None:
             circularity**.
             """
         )
+        
+        res = _ensure_results()
+        df = res["agro"].copy()
+
+        # KPIs
+        total_trunk = float(df["trunk_t"].sum()) if "trunk_t" in df else 0.0
+        total_crown = float(df["crown_t"].sum()) if "crown_t" in df else 0.0
+        total_roots = float(df["roots_t"].sum()) if "roots_t" in df else 0.0
+        compost_t = float(df.get("compost_t", pd.Series([0])).sum())
+
+        st.subheader("Key biomass indicators")
+
+        kpi_cols = st.columns(4)
+        kpi_cols[0].metric("Total Trunk (t)", f"{total_trunk:,.1f}")
+        kpi_cols[1].metric("Total Crown (t)", f"{total_crown:,.1f}")
+        kpi_cols[2].metric("Total Roots (t)", f"{total_roots:,.1f}")
+        kpi_cols[3].metric("Compost / Discards (t)", f"{compost_t:,.1f}")
+
+        st.caption(
+            "These figures aggregate biomass over the whole scenario horizon. "
+            "They provide a quick sense of **how productive the plantations are** "
+            "and how much material is routed into **products vs. soil/compost**."
+        )
 
     with top_col2:
+        # st.image(
+        #     "assets/images/FullLogoGroundedRoots.png",
+        #     caption="PauwMyco – Turning biomass into circular value",
+        #     use_container_width=True,
+        # )
         st.image(
-            "assets/images/FullLogoGroundedRoots.png",
-            caption="PauwMyco – Turning biomass into circular value",
-            use_container_width=True,
-        )
-        st.image(
-            "assets/images/pauwmyco_biomass_flows_hero.png",
+            "assets/images/GenAI_Paulownia_CE.png",
             caption="Trunk, crown and roots feeding materials, chemistry and soils.",
             use_container_width=True,
         )
@@ -108,28 +131,7 @@ def page() -> None:
     st.markdown("---")
 
     # --- Run / retrieve results (original logic preserved) ------------------
-    res = _ensure_results()
-    df = res["agro"].copy()
-
-    # KPIs
-    total_trunk = float(df["trunk_t"].sum()) if "trunk_t" in df else 0.0
-    total_crown = float(df["crown_t"].sum()) if "crown_t" in df else 0.0
-    total_roots = float(df["roots_t"].sum()) if "roots_t" in df else 0.0
-    compost_t = float(df.get("compost_t", pd.Series([0])).sum())
-
-    st.subheader("Key biomass indicators")
-
-    kpi_cols = st.columns(4)
-    kpi_cols[0].metric("Total Trunk (t)", f"{total_trunk:,.1f}")
-    kpi_cols[1].metric("Total Crown (t)", f"{total_crown:,.1f}")
-    kpi_cols[2].metric("Total Roots (t)", f"{total_roots:,.1f}")
-    kpi_cols[3].metric("Compost / Discards (t)", f"{compost_t:,.1f}")
-
-    st.caption(
-        "These figures aggregate biomass over the whole scenario horizon. "
-        "They provide a quick sense of **how productive the plantations are** "
-        "and how much material is routed into **products vs. soil/compost**."
-    )
+    
 
     with st.expander("How to interpret these biomass KPIs as an investor"):
         st.markdown(
@@ -227,7 +229,7 @@ def page() -> None:
         st.warning(f"Sankey not available: {e}")
 
     st.image(
-        "assets/images/pauwmyco_biomass_flows_sankey_story.png",
+        "assets/images/GenAI_forest_Theo_Panels.png",
         caption="From field inputs to products, soil and regional value.",
         use_container_width=True,
     )
