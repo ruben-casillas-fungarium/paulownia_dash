@@ -106,7 +106,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_logistics_hero.png",
+            "assets/images/GenAI_logistics.png",
             caption="Connecting Paulownia fields and plants with cost and CO₂ in mind.",
             use_container_width=True,
         )
@@ -182,7 +182,7 @@ def page() -> None:
         st.plotly_chart(fig_e, width="stretch")
 
         st.image(
-            "assets/images/pauwmyco_logistics_kpis.png",
+            "assets/images/GenAI_Pauwloania_Extraction.png",
             caption="Logistics KPIs and trends: optimising distance, payload and emissions.",
             use_container_width=True,
         )

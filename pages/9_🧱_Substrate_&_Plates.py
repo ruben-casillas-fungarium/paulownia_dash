@@ -114,7 +114,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_substrate_plates_hero.png",
+            "assets/images/GenAI_Panel_Leaf.png",
             caption="From wet substrate to scalable biocomposite plates.",
             use_container_width=True,
         )
@@ -180,7 +180,7 @@ def page() -> None:
         )
 
     st.image(
-        "assets/images/pauwmyco_substrate_plates_kpis.png",
+        "assets/images/GenAI_Panel_Greenhauses.png",
         caption="KPIs: throughput, energy and material costs per scenario.",
         use_container_width=True,
     )

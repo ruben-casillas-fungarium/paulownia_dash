@@ -120,11 +120,11 @@ def page() -> None:
             caption="PauwMyco – closing the loop in soil and materials",
             use_container_width=True,
         )
-        # st.image(
-        #     "assets/images/pauwmyco_soil_carbon_hero.png",
-        #     caption="Treated vs baseline soil carbon per hectare over time.",
-        #     use_container_width=True,
-        # )
+        st.image(
+            "assets/images/GenAI_SoilC_.png",
+            caption="Treated vs baseline soil carbon per hectare over time.",
+            use_container_width=True,
+        )
 
     st.markdown("---")
 
@@ -188,11 +188,11 @@ def page() -> None:
 
     st.markdown("---")
 
-    # st.image(
-    #     "assets/images/pauwmyco_soil_carbon_kpi.png",
-    #     caption="Key indicators and progression of soil carbon improvement.",
-    #     use_container_width=True,
-    # )
+    st.image(
+        "assets/images/GenAI_Crop_Difference.png",
+        caption="Key indicators and progression of soil carbon improvement.",
+        use_container_width=True,
+    )
 
 if __name__ == "__main__":
     page()

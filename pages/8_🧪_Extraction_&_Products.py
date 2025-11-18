@@ -76,7 +76,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            In the PauwMyco model, **Paulownia roots** don’t just stay underground –
+            **Paulownia roots** don’t just stay underground –
             they become **high-value biotech products**.
 
             This page shows how the extraction unit converts roots into:
@@ -108,7 +108,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_extraction_products_hero.png",
+            "assets/images/GenAI_Theobro_Markets.png",
             caption="Turning Paulownia roots into MyzelBooster and co-products.",
             use_container_width=True,
         )
@@ -177,7 +177,7 @@ def page() -> None:
         )
 
     st.image(
-        "assets/images/pauwmyco_extraction_products_kpis.png",
+        "assets/images/GenAI_Roots_Theo_Prods.png",
         caption="Extraction KPIs: linking roots processed to revenue, energy and CO₂.",
         use_container_width=True,
     )

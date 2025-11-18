@@ -102,7 +102,7 @@ def page() -> None:
             use_container_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_scenarios_compare_hero.png",
+            "assets/images/GenAI_Comparison_Sensitivity.png",
             caption="Compare regions, phases or strategies side by side.",
             use_container_width=True,
         )
@@ -253,7 +253,7 @@ def page() -> None:
 
         with col_img:
             st.image(
-                "assets/images/pauwmyco_sensitivity_hero.png",
+                "assets/images/GenAI_Comparison_Sensitivity.png",
                 caption="See how key parameters shift PauwMyco cashflows.",
                 use_container_width=True,
             )

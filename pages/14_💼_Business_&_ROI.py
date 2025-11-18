@@ -106,11 +106,11 @@ def page() -> None:
             caption="PauwMyco – circular bio-industry as an investable asset",
             use_container_width=True,
         )
-        # st.image(
-        #     "assets/images/pauwmyco_business_roi_hero.png",
-        #     caption="From hectares and biomass to investor returns.",
-        #     use_container_width=True,
-        # )
+        st.image(
+            "assets/images/CE_Fungarium.png",
+            caption="From hectares and biomass to investor returns.",
+            use_container_width=True,
+        )
 
     st.markdown("---")
 
@@ -227,11 +227,11 @@ def page() -> None:
         "shift in a developing-country context."
     )
 
-    # st.image(
-    #     "assets/images/pauwmyco_business_roi_kpis.png",
-    #     caption="Snapshot: revenue, profit, investor returns and margin uplift vs EPS.",
-    #     use_container_width=True,
-    # )
+    st.image(
+        "assets/images/Deal_w_Us.png",
+        caption="Snapshot: revenue, profit, investor returns and margin uplift vs EPS.",
+        use_container_width=True,
+    )
 
     st.markdown("---")
 

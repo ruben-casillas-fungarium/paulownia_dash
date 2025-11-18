@@ -99,7 +99,7 @@ def page() -> None:
             use_column_width=True,
         )
         st.image(
-            "assets/images/pauwmyco_economics_hero.png",
+            "assets/images/GenAI_CE_Economy_wood_plates.png",
             caption="From circular biomass flows to investor-grade KPIs.",
             use_column_width=True,
         )
@@ -262,7 +262,7 @@ def page() -> None:
         )
     with ctx_col2:
         st.image(
-            "assets/images/pauwmyco_economics_context.png",
+            "assets/images/GenAI_CE_Prosperity.png",
             caption="Connecting project cashflows to policy, phases and impact.",
             use_column_width=True,
         )

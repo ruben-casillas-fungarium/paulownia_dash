@@ -141,11 +141,11 @@ def page() -> None:
             caption="PauwMyco – closing the loop at end of life",
             use_container_width=True,
         )
-        # st.image(
-        #     "assets/images/pauwmyco_eol_coverage_hero.png",
-        #     caption="Recovered plates applied back to land as a resource.",
-        #     use_container_width=True,
-        # )
+        st.image(
+            "assets/images/GenAI_BlockinField.png",
+            caption="Recovered plates applied back to land as a resource.",
+            use_container_width=True,
+        )
 
     st.markdown("---")
 
@@ -205,11 +205,11 @@ def page() -> None:
             """
         )
 
-    # st.image(
-    #     "assets/images/pauwmyco_eol_kpis.png",
-    #     caption="Coverage KPIs and land restoration potential per scenario.",
-    #     use_container_width=True,
-    # )
+    st.image(
+        "assets/images/GenAI_BlockField_Degraded.png",
+        caption="Coverage KPIs and land restoration potential per scenario.",
+        use_container_width=True,
+    )
 
     st.markdown("---")
 
