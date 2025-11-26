@@ -385,11 +385,13 @@ def main() -> None:
         )
 
         st.info(
-            "If you are an investor or partner and would like a tailored scenario "
-            "configured with your own regional assumptions, please contact the "
-            "**[Pretzl Paulownia](https://paulownia-baum.com/) and [Fungarium Global](https://www.fungarium.de)** team.
-            "This dashboard is an exploratory tool, not a substitute "
-            "for full technical and financial due diligence."
+          """
+            If you are an investor or partner and would like a tailored scenario 
+            configured with your own regional assumptions, please contact the 
+            **[Pretzl Paulownia](https://paulownia-baum.com/) and [Fungarium Global](https://www.fungarium.de)** team.
+            This dashboard is an exploratory tool, not a substitute 
+            for full technical and financial due diligence.
+            """
         )
 
 
