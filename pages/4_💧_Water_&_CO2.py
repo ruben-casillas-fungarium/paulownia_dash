@@ -69,7 +69,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            This view shows how your PauwMyco scenario performs on two
+            This view shows how your scenario performs on two
             **critical axes for climate-resilient growth**:
 
             - **Water demand** – how many cubic meters of water your Paulownia
@@ -89,7 +89,7 @@ def page() -> None:
             stress** in many regions, investors and policymakers are looking
             for projects that can **fix large amounts of CO₂** while using
             water **efficiently and responsibly**. This page helps you quantify
-            that balance for PauwMyco.
+            that balance.
             """
         )
 
@@ -139,7 +139,7 @@ def page() -> None:
               trees and, where relevant, long-lived products. This connects
               your scenario directly to **EU emissions reduction trajectories** "
               "and potential **carbon credit** opportunities.\n
-            - Combined, these metrics show whether PauwMyco can deliver **meaningful "
+            - Combined, these metrics show whether we can deliver **meaningful "
               "climate mitigation per unit of water used**, compared with other "
               "land-use or biomass options.
             """
@@ -222,7 +222,7 @@ def page() -> None:
             **2. Agroforestry practice**
 
             - Paulownia can be highly productive, but certain species are on "
-              "alert lists for invasive potential in parts of Europe. PauwMyco "
+              "alert lists for invasive potential in parts of Europe. We "
               "emphasises **responsible species choice and management**.\n
             - Efficient irrigation, mixed-species systems and careful siting "
               "help ensure that water and biodiversity impacts remain positive.

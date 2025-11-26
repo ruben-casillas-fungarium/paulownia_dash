@@ -78,7 +78,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            This page shows the **engine room** of PauwMyco’s physical products:
+            This page shows the **engine room** of the model’s physical products:
             how substrate becomes **mycelium–Paulownia plates** that can replace
             EPS and other fossil foams.
 
@@ -157,7 +157,7 @@ def page() -> None:
     st.caption(
         "These figures provide a high-level view of **factory throughput**, "
         "**energy demand** and **materials costs**. They are key drivers for "
-        "assessing PauwMyco plate margins and competitiveness."
+        "assessing the model plate margins and competitiveness."
     )
 
     with st.expander("How to interpret these KPIs for investors"):
@@ -175,7 +175,7 @@ def page() -> None:
               are levers for **process optimisation** and **supplier strategy**.\n
             - **Manufacturing cost per plate** – A key number for pricing strategy
               against EPS and other materials, and for targeting the EBITDA levels
-              described in PauwMyco’s phase roadmap.
+              described in phase roadmap.
             """
         )
 
@@ -258,7 +258,7 @@ def page() -> None:
         st.caption(
             "Full plates dataset, including plate counts, dry mass and energy "
             "use per period. This table underpins the product-side of the "
-            "PauwMyco business case."
+            "business case."
         )
         st.dataframe(df_pl, width="stretch")
         st.download_button(

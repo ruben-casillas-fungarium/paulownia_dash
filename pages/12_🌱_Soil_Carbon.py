@@ -95,7 +95,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            At PauwMyco, we go beyond building panels — we aim to **restore soils**.
+            We go beyond building panels — we aim to **restore soils**.
 
             This page shows how recovered plates and circular reuse can help
             increase **soil carbon sequestration per hectare (tCO₂/ha)**, compared
@@ -167,7 +167,7 @@ def page() -> None:
 
     st.caption(
         "The upper line shows how much carbon is stored per hectare when our material is returned to land; the lower line is a baseline scenario. "
-        "The gap (delta) is the additional sequestration potential enabled by PauwMyco’s circular model."
+        "The gap (delta) is the additional sequestration potential enabled by our circular model."
     )
 
     st.markdown("---")

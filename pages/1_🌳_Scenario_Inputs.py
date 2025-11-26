@@ -29,7 +29,7 @@ def page() -> None:
 
             This page lets you translate high-level assumptions – hectares, prices,
             logistics, extraction, plate manufacturing, labor, and end-of-life – into
-            **quantitative simulations** of PauwMyco's integrated value chain.
+            **quantitative simulations** of our integrated value chain.
 
             Use this as an **investor cockpit**:
 
@@ -80,12 +80,12 @@ def page() -> None:
 
     # Project form
     with st.form("project_form"):
-        st.subheader("Configure your PauwMyco scenario")
+        st.subheader("Configure your scenario")
 
         st.caption(
             "All values below are **per scenario**. Use them to model anything from a "
             "small Micro pilot to a Phase B or C industrial configuration. "
-            "The structure follows the PauwMyco value chain: agriculture → logistics "
+            "The structure follows the value chain: agriculture → logistics "
             "→ extraction → substrate → plates → labor → end-of-life."
         )
 
@@ -106,14 +106,14 @@ def page() -> None:
             n_hectares = st.number_input(
                 "Area (hectares)",
                 min_value=1,
-                max_value=10_000,
+                max_value=1_000_000,
                 value=scn.n_hectares,
                 step=1,
             )
 
             st.caption(
                 "Years define the simulation horizon. Hectares represent the "
-                "Paulownia-dominated agroforestry area feeding the PauwMyco value "
+                "Paulownia-dominated agroforestry area feeding the value "
                 "chain. Use larger areas for Phase B/C-style regional hubs."
             )
 
@@ -315,7 +315,7 @@ def page() -> None:
             )
 
             st.caption(
-                "These parameters drive the **core unit economics** of PauwMyco's "
+                "These parameters drive the **core unit economics** of "
                 "mycelium boards and packaging: energy per 100 plates, cost, and "
                 "retail price per plate."
             )
@@ -370,7 +370,7 @@ def page() -> None:
             st.caption(
                 "End-of-life captures how much material re-enters the **soil loop** "
                 "and at what carbon price these climate benefits can be monetised. "
-                "This is where circularity becomes a **financial lever**."
+                "This is where circularity becomes a **financial lever** specially at grand scales."
             )
 
         submitted = st.form_submit_button("Run Simulation")
@@ -437,7 +437,7 @@ def page() -> None:
     st.subheader("Scenario JSON")
 
     st.caption(
-        "Export a scenario to share it with the PauwMyco team or other investors, "
+        "Export a scenario to share it with the team or other investors, "
         "or import a JSON file with predefined assumptions. This ensures everyone "
         "is looking at **the same numbers** when discussing project phases and risk."
     )

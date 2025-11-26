@@ -85,7 +85,7 @@ def page() -> None:
 
         st.markdown(
             """
-            PauwMyco’s growth roadmap (Micro → A → B → C → D) targets
+            Our growth roadmap (Micro → A → B → C → D) targets
             step-changes in **revenue and EBITDA** at each phase, while staying
             aligned with EU climate and circular-economy policies. This dashboard
             lets you test if your assumptions are consistent with that trajectory.
@@ -137,7 +137,7 @@ def page() -> None:
         "phases, while **payback** gives a quick sense of capital recovery speed."
     )
 
-    with st.expander("How to read NPV, IRR and payback in PauwMyco’s context"):
+    with st.expander("How to read NPV, IRR and payback in context"):
         st.markdown(
             f"""
             - **NPV (Net Present Value)** – Discounted sum of all yearly cashflows,
@@ -153,7 +153,7 @@ def page() -> None:
               magnitude growth from **Micro (~€0.7M, ~15% EBITDA)** to **Phase A
               (~€13.7M, 25–30% EBITDA)** and **Phase B (~€48–70M, 30–35% EBITDA)**
               before reaching **Phase C/D** scale. Your scenario should feel
-              consistent with that stepwise de-risked approach.
+              consistent with that stepwise "de-risked" approach.
             """
         )
 

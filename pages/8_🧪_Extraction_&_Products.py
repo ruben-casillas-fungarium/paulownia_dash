@@ -171,7 +171,7 @@ def page() -> None:
               aligned with **EU climate targets**, this should be modest relative
               to **CO₂ fixed** in biomass and products.\n
             - **Extract revenue (annual)** – Gross revenue from extract sales
-              (all years combined in this KPI). This is a key pillar of PauwMyco’s
+              (all years combined in this KPI). This is a key pillar of the
               **multi-stream business model** alongside plates and wood.
             """
         )

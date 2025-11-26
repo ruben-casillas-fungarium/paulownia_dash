@@ -23,7 +23,7 @@ def page() -> None:
 
             - How much **CO₂ is fixed and kept out of the atmosphere**  
             - How much **wood and water** flow through the system  
-            - How **cashflow accumulates** as PauwMyco plants scale
+            - How **cashflow accumulates** as plants scale
 
             Each simulation respects the underlying assumptions you set on the
             **Scenario Inputs** page and reflects the integrated agriculture,
@@ -89,7 +89,7 @@ def page() -> None:
             f"""
             - **Total CO₂ fixed (t)** – The cumulative tonnes of CO₂ fixed in
               biomass and products across the scenario period. This is where the
-              PauwMyco system connects to **EU climate law** trajectories and
+              system connects to **EU climate law** trajectories and
               potential carbon credit schemes.\n
             - **Total wood (m³)** – The total Paulownia wood volume harvested and
               routed into materials and chemistry. This links directly to **plant
@@ -175,7 +175,7 @@ def page() -> None:
 
     st.caption(
         "Export the full joined dataset for deeper analysis in Excel, Python, or "
-        "for sharing with the PauwMyco team and investors."
+        "for sharing with the team and investors."
     )
 
     csv_str = df.to_csv(index=False)

@@ -92,7 +92,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            This page aggregates the **entire PauwMyco value chain** from
+            This page aggregates the **entire value chain** from
             **Paulownia fields (cradle)** to **mycelium–Paulownia plates and
             co-products at the factory gate (gate)**.
 
@@ -103,7 +103,7 @@ def page() -> None:
             - What is the overall **NPV and IRR** of the cradle-to-gate project?
 
             In EU climate and circular-economy language, this is your
-            **cradle-to-gate business case** for a regional PauwMyco deployment.
+            **cradle-to-gate business case** for a regional deployment.
             """
         )
 
@@ -113,7 +113,7 @@ def page() -> None:
 
             - Summarise the project for **investor memos and IC decks**  
             - Compare against other green infrastructure or industrial projects  
-            - Check if the scenario aligns with **PauwMyco’s phase roadmap**
+            - Check if the scenario aligns with **phase roadmap**
               (Micro → A → B → C/D)
             """
         )
@@ -147,7 +147,7 @@ def page() -> None:
     st.caption(
         "These KPIs aggregate all revenues and costs from the modelled period. "
         "**NPV** (at the scenario discount rate) and **IRR** are standard "
-        "metrics used by investors to benchmark PauwMyco against other "
+        "metrics used by investors to benchmark the model against other "
         "industrial and infrastructure opportunities."
     )
 
@@ -166,7 +166,7 @@ def page() -> None:
               "or to typical requirements for industrial plants and green "
               "infrastructure.\n
             - Together, they provide a **cradle-to-gate snapshot** of the "
-              "PauwMyco scenario’s financial quality.
+              "scenario’s financial quality.
             """
         )
 
@@ -215,7 +215,7 @@ def page() -> None:
         "This waterfall breaks down **one year** of the scenario into revenue "
         "blocks (wood, plates, extracts, CO₂) and cost blocks (water, OPEX, "
         "logistics, substrate, CAPEX). It helps you see where value is "
-        "created and where it is spent along the PauwMyco chain."
+        "created and where it is spent along the chain."
     )
 
     # --- Cumulative cashflow -------------------------------------------------

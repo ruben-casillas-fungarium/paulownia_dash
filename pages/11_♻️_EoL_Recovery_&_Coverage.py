@@ -110,7 +110,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            PauwMyco does not stop at the factory gate.
+            The model does not stop at the factory gate.
 
             This page explores what happens **at the end of life** of our
             mycelium–Paulownia plates:
@@ -121,7 +121,7 @@ def page() -> None:
             - How does this relate to emerging **EU soil health and nature
               restoration targets**?
 
-            The goal is to show that PauwMyco can contribute to **land and soil
+            The goal is to show that it can contribute to **land and soil
             restoration**, not just to low-carbon materials.
             """
         )
@@ -198,7 +198,7 @@ def page() -> None:
             - Circular economy measures increasingly expect producers to think "
               about **end-of-life and material recovery** as part of the business "
               "model, not an afterthought.\n
-            - In this context, PauwMyco’s concept of **re-applying plates to "
+            - In this context, our concept of **re-applying plates to "
               "land** (where safe and permitted) can support erosion control, "
               "soil cover and organic matter build-up – provided local rules and "
               "biodiversity safeguards are respected.

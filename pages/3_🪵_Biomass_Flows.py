@@ -68,12 +68,12 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            This view shows how **Paulownia biomass** moves through the PauwMyco
+            This view shows how **Paulownia biomass** moves through the
             system:
 
             - **Trunk** – structural wood for sawmills, boards and mycelium
               substrates  
-            - **Crown** – leaves and branches that can become **compost or energy**  
+            - **Crown** – leaves and branches that can become **compost, mycelium substrates or energy**  
             - **Roots** – feedstock for **MyzelBooster, oleic acid and theobromine**
 
             Together, these flows determine:
@@ -145,7 +145,8 @@ def page() -> None:
               regeneration** and local energy strategies.\n
             - **Total Roots (t)** – Indicates the **chemical potential** of the
               plantation (MyzelBooster, oleic acid, theobromine). These streams
-              help diversify revenue and stabilise the business model.\n
+              help diversify revenue and stabilise the business model and leftover fibers
+              are used in mycelium products.\n
             - **Compost / Discards (t)** – Material that does not go into primary
               products. In a well-tuned circular system, a significant share
               should return to **soils**, closing nutrient loops and supporting

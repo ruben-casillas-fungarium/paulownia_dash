@@ -71,7 +71,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            Logistics is the **circulatory system** of the PauwMyco model.
+            Logistics is the **circulatory system** of the model.
 
             This page shows how biomass moves from **Paulownia fields** to
             **mycelium and chemistry plants** and what that means for:
@@ -89,7 +89,7 @@ def page() -> None:
 
         st.markdown(
             """
-            In practice, PauwMyco aims to keep logistics:
+            In practice,  aims to keep logistics:
 
             - **Short and dense** – clustering plants near biomass sources  
             - **Efficient** – right-sized trucks and high payload utilisation  
@@ -102,7 +102,7 @@ def page() -> None:
     with top_col2:
         st.image(
             "assets/images/PretzlPaulowniaLogo.png",
-            caption="PauwMyco – Smart logistics for circular materials",
+            caption=" – Smart logistics for circular materials",
             use_container_width=True,
         )
         st.image(

@@ -83,7 +83,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            At the **end of life** of PauwMyco plates, the story does not stop.
+            At the **end of life** of our plates plates, the story does not stop.
             When recovered and applied back to land, plates can help:
 
             - **Store additional carbon in soils** compared to a baseline  
@@ -254,7 +254,7 @@ def page() -> None:
         "This waterfall shows how much of the **gross carbon revenue** in the "
         "selected year is absorbed by operational costs and monitoring. The "
         "resulting bar is the **net EoL cashflow** that can be attributed to "
-        "PauwMyco’s circular land-application strategy."
+        "our circular land-application strategy."
     )
 
     st.markdown("---")

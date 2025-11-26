@@ -48,7 +48,7 @@ def main() -> None:
     st.sidebar.markdown(
         """
         - **Target:** Replace EPS and petro-foams with mycelium biocomposites  
-        - **Core feedstock:** Paulownia biomass + regional residues  
+        - **Core feedstock:** Paulownia biomass + regional residues   
         - **Co-products:** MyzelBooster, theobromine, oleic acid  
         - **Phases:** Micro → A → B → C → D (scaling & replication)
         """
@@ -91,7 +91,7 @@ def main() -> None:
         st.markdown(
             """
             This dashboard models the integrated **Paulownia + mycelium circular economy**  
-            behind **Pretzl Paulownia and Fungarium Global** – from **agroforestry and biomass harvesting** to  
+            behind **[Pretzl Paulownia](https://paulownia-baum.com/) and [Fungarium Global](https://www.fungarium.de)** – from **agroforestry and biomass harvesting** to  
             **mycelium biocomposites**, **chemical co-products**, and **soil regeneration**.
 
             Use it to explore how different planting, harvesting and processing
@@ -106,8 +106,8 @@ def main() -> None:
 
         st.markdown(
             """
-            Investors can combine this dashboard with our phase roadmap
-            (Micro → A → B → C → D) to understand **revenue growth, CAPEX needs and risk**
+            Investors can combine this dashboard to understand
+            **revenue growth, CAPEX needs and risk**
             for each deployment step.
             """
         )
@@ -154,9 +154,9 @@ def main() -> None:
                 1. **Paulownia cultivation & biomass**
                    - Fast-growing, deep-rooted tree with excellent CO₂ uptake and
                      soil-building potential  
-                   - Sourced primarily from the **Pretzlhof Paulownia** network with
+                   - Sourced primarily from the **[Pretzl Paulownia](https://paulownia-baum.com/)** network with
                      visibility on ~90% of relevant EU Paulownia feedstock  
-                   - Blended with regional residues (e.g. Miscanthus) to de-risk supply
+                   - Blended with regional residues (e.g. Miscanthus, Hemp, Paper, etc.) to de-risk supply
 
                 2. **Mycelium biocomposites (MycoPlatte / MCB)**
                    - Mycelium binds Paulownia-rich substrate into rigid panels or
@@ -169,10 +169,10 @@ def main() -> None:
                 3. **Chemical co-products (MyzelBooster, theobromine, oleic acid)**
                    - Process water and biomass streams yield **MyzelBooster** (fungal
                      growth booster),  
-                     plus higher-purity **theobromine** and **oleic acid** in later
-                     phases  
+                     plus higher-purity **[theobromine](https://en.wikipedia.org/wiki/Theobromine)** and **[oleic acid](https://en.wikipedia.org/wiki/Oleic_acid)** in later
+                     separation phases  
                    - These co-products **subsidise material costs**, increasing
-                     contribution margin per tonne
+                     contribution margin per tonne and reducing the cost of our MycoPlatte
 
                 4. **End-of-life & soil loop**
                    - Spent materials can be shredded, composted and returned to soil  
@@ -199,6 +199,7 @@ def main() -> None:
                 - Multiple revenue streams from one asset base  
                 - Built-in hedging between materials and chemistry  
                 - Strong narrative fit with ESG, green bonds and impact mandates
+                - Addressing planetary solvency: climate, waste, soil health and profits
                 """
             )
 
@@ -207,7 +208,7 @@ def main() -> None:
 
         c1, c2, c3, c4, c5 = st.columns(5)
         c1.metric("Micro", "Proof-of-concept", "Lab & pilot")
-        c2.metric("Phase A", "€13.7 M/y", "First industrial plant")
+        c2.metric("Phase A", "€7 M/y", "First industrial plant")
         c3.metric("Phase B", "€48–70 M/y", "EU & export hub")
         c4.metric("Phase C", "€250 M+/y", "3–5 plants, multi-country")
         c5.metric("Phase D", "€B+ scale", "Global EPS displacement")
@@ -221,8 +222,10 @@ def main() -> None:
             st.markdown(
                 """
                 - Substrate: >50% Paulownia, blended with regional lignocellulosic inputs  
-                - Manufacturing: sterilisation → inoculation → growth in molds →
-                  pressing → drying/finishing  
+                - Early Manufacturing: sterilisation → inoculation → growth in molds →
+                  pressing → drying/finishing
+                Planned Manufacturing Enhancements (Phases B+): continuous
+                substrate preparation, automated molding lines, intelligent tracking and shelving and post-processing
                 - Performance targets:
                   - Thermal conductivity: ~0.040–0.055 W/(m·K) depending on density  
                   - Compressive strength: ≥ 250 kPa (10% deformation)  
@@ -238,8 +241,10 @@ def main() -> None:
 
         st.markdown(
             """
-            - The **European Green Deal** and the **European Climate Law** lock in
-              **–55% net GHG emissions by 2030** and **climate neutrality by 2050**.  
+            - The **[European Green Deal](https://commission.europa.eu/strategy-and-policy/priorities-2019-2024/european-green-deal_en)** 
+            and the **[European Climate Law](https://climate.ec.europa.eu/eu-action/european-climate-law_en)** lock in
+              **–[55% net GHG emissions by 2030](https://climate.ec.europa.eu/eu-action/climate-strategies-targets/2030-climate-targets_en)**
+              and **[climate neutrality by 2050](https://climate.ec.europa.eu/eu-action/climate-strategies-targets/2050-long-term-strategy_en)**.  
             - Buildings account for ~**40% of EU energy use**; meeting 2030 goals
               requires **~60% reduction in building-related emissions**, pushing
               low-carbon insulation and materials.  
@@ -248,7 +253,7 @@ def main() -> None:
             """
         )
 
-        st.markdown("### 2. Packaging & Packaging Waste Regulation (PPWR 2025/40)")
+        st.markdown("### 2. Packaging & Packaging Waste Regulation ([PPWR 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng))")
 
         st.markdown(
             """
@@ -259,7 +264,7 @@ def main() -> None:
             - Combined with the **EU plastic levy** on non-recycled plastic packaging,
               this increases the effective cost of conventional EPS packaging.  
             - Several member states, such as France, are moving towards **bans or
-              strong restrictions on styrenic packaging** by **2030**, further
+              strong restrictions on EPS** by **2030**, further
               accelerating the shift away from EPS.
             """
         )
@@ -272,15 +277,14 @@ def main() -> None:
             and EPR fees rise for fossil foams.
             """
         )
-
         st.markdown("### 3. Paulownia agroforestry & regulatory considerations")
 
         st.markdown(
             """
-            - **Paulownia** species are attractive for climate-smart agroforestry:  
+            - **[Paulownia](https://en.wikipedia.org/wiki/Paulownia)** species are attractive for climate-smart agroforestry:  
               they are **fast-growing**, can absorb **up to ~2× more CO₂** than many
               conventional tree species, and store carbon in wood and soil.  
-            - In some EU regions, specific species (e.g. *Paulownia tomentosa*) are on
+            - In some EU regions, specific species (e.g. *[Paulownia tomentosa](https://www.eppo.int/ACTIVITIES/plant_quarantine/alert_list_plants/paulownia_tomentosa)*) are on
               **alert lists** for potential invasiveness, and certain member states do
               **not** classify Paulownia as a forest species for afforestation subsidies.  
             - EU regulation on **invasive alien species** requires careful species
@@ -373,17 +377,18 @@ def main() -> None:
             **4. Takeaways for investor conversations**
 
             - Translate dashboards into **phase-based milestones** (utilization, CAPEX,
-              revenue, EBITDA) that match PauwMyco's business plan.  
+              revenue, EBITDA) that match a business plan.  
             - Use the climate & policy tab as a **talk track** for why this model is
               structurally favoured by EU regulation.  
-            - Export screenshots or numbers into pitch decks and data rooms as needed.
+            - Export screenshots or numbers into pitch decks and data as needed.
             """
         )
 
         st.info(
             "If you are an investor or partner and would like a tailored scenario "
             "configured with your own regional assumptions, please contact the "
-            "Fungarium Global and or Pretzl Paulownia team. This dashboard is an exploratory tool, not a substitute "
+            "**[Pretzl Paulownia](https://paulownia-baum.com/) and [Fungarium Global](https://www.fungarium.de)** team.
+            "This dashboard is an exploratory tool, not a substitute "
             "for full technical and financial due diligence."
         )
 

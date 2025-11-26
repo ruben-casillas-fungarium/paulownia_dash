@@ -83,7 +83,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            This page brings the whole PauwMyco story together in **business terms**.
+            This page brings the whole story together in **business terms**.
 
             It compares **mycelium–Paulownia plates vs. EPS**, aggregates revenue
             from materials and co-products, and allocates profits between
@@ -312,7 +312,7 @@ def page() -> None:
     )
 
     st.caption(
-        "This comparison highlights PauwMyco’s potential to match or exceed EPS "
+        "This comparison highlights our potential to match or exceed EPS "
         "unit margins, while providing additional benefits in terms of CO₂ "
         "storage, circularity and alignment with EU decarbonisation policies."
     )
@@ -349,10 +349,18 @@ def page() -> None:
     st.markdown(
         """
         _Tip for investors_: combine this page with the **Cradle-to-Gate Summary**
-        and **Soil Carbon** views to see how PauwMyco delivers not only attractive
+        and **Soil Carbon** views to see how we deliver not only attractive
         returns, but also **measurable climate and land-use impact** that fits
         within the European Green Deal and Clean Industrial Deal agendas.
         """
+    )
+    
+    st.info(
+    "If you are an investor or partner and would like a tailored scenario "
+    "configured with your own regional assumptions, please contact the "
+    "**[Pretzl Paulownia GmbH](https://paulownia-baum.com/) and [Fungarium Global UG](https://www.fungarium.de)** team.
+    "This dashboard is an exploratory tool, not a substitute "
+    "for full technical and financial due diligence."
     )
 
 

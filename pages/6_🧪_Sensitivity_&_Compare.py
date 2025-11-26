@@ -74,7 +74,7 @@ def page() -> None:
     with top_col1:
         st.markdown(
             """
-            Use this page as a **laboratory for PauwMyco scenarios**.
+            Use this page as a **laboratory for scenarios**.
 
             - Compare **two regions or phases** side by side (Scenario A vs B)  
             - Load **saved JSON** to align assumptions with investors or partners  
@@ -196,7 +196,7 @@ def page() -> None:
                 "This comparison highlights the **trade-offs** between two "
                 "configurations: one might have higher NPV, the other stronger "
                 "CO₂ impact or lower water use. Investors can use this to "
-                "position PauwMyco in different **regions and policy futures**."
+                "position projects in different **regions and policy futures**."
             )
         else:
             st.info(
